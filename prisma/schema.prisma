@@ -33,3 +33,8 @@ model Classes {
   courseId    Int?
  
 }
+
+model Projects {
+  projectId Int    @default(autoincrement()) @id
+  projectFile  String
+}

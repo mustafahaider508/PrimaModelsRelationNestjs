@@ -5,9 +5,16 @@ import { StudentModule } from './student/student.module';
 import { CoursesModule } from './courses/courses.module';
 import { ClassesModule } from './classes/classes.module';
 import { PrismaModule } from '../prisma/prisma.module';
+import { ProjectsModule } from './projects/projects.module';
 
 @Module({
-  imports: [StudentModule, CoursesModule, ClassesModule, PrismaModule],
+  imports: [
+    StudentModule,
+    CoursesModule,
+    ClassesModule,
+    PrismaModule,
+    ProjectsModule,
+  ],
 
   controllers: [AppController],
   providers: [AppService],
