@@ -6,6 +6,8 @@ import { CoursesModule } from './courses/courses.module';
 import { ClassesModule } from './classes/classes.module';
 import { PrismaModule } from '../prisma/prisma.module';
 import { ProjectsModule } from './projects/projects.module';
+import { ServeStaticModule } from '@nestjs/serve-static/dist/serve-static.module';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -14,6 +16,9 @@ import { ProjectsModule } from './projects/projects.module';
     ClassesModule,
     PrismaModule,
     ProjectsModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', '../uploads'),
+    }),
   ],
 
   controllers: [AppController],

@@ -36,5 +36,7 @@ model Classes {
 
 model Projects {
   projectId Int    @default(autoincrement()) @id
-  projectFile  String
+  projectFile String 
+  fileName String
 }
+
