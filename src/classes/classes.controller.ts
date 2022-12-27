@@ -1,7 +1,9 @@
 import { Body, Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { ClassesService } from './classes.service';
 import { Response } from 'express';
+import { ApiResponse, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Classes')
 @Controller('classes')
 export class ClassesController {
   constructor(private readonly classesService: ClassesService) {}

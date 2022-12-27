@@ -3,7 +3,9 @@ import { CoursesService } from './courses.service';
 import { Response } from 'express';
 import { courseDto } from './dto/course.dto';
 import { StudentDto } from 'src/student/Dto/student.dto';
+import { ApiResponse, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Courses')
 @Controller('courses')
 export class CoursesController {
   constructor(private readonly coursesService: CoursesService) {}
