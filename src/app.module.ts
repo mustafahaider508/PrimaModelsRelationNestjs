@@ -8,6 +8,7 @@ import { PrismaModule } from '../prisma/prisma.module';
 import { ProjectsModule } from './projects/projects.module';
 import { ServeStaticModule } from '@nestjs/serve-static/dist/serve-static.module';
 import { join } from 'path';
+import { GatewayModule } from './gateway/gateway.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { join } from 'path';
     ClassesModule,
     PrismaModule,
     ProjectsModule,
+    GatewayModule,
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', '../uploads'),
     }),
